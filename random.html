@@ -29,7 +29,7 @@ function shuffleArray(arr) {
 function ArlinaRandomPosts(json) {
     var startIndex = getRandomInt(1, (json.feed.openSearch$totalResults.$t - maxResults));
     // console.log('Get the post feed start from ' + startIndex + ' until ' + (startIndex + maxResults));
-    document.write('<scr' + 'ipt src="' + homePage + '/feeds/posts/summary?alt=json-in-script&orderby=updated&start-index=' + startIndex + '&max-results=' + maxResults + '&callback=randomPosts"></scr' + 'ipt>');
+    document.write('<scr' + 'ipt src="' + ssl + homePage + '/feeds/posts/summary?alt=json-in-script&orderby=updated&start-index=' + startIndex + '&max-results=' + maxResults + '&callback=randomPosts"></scr' + 'ipt>');
 }
 function randomPosts(json) {
     var link, ct = document.getElementById(containerId),
